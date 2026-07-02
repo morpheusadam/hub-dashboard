@@ -243,8 +243,8 @@ MIT. See [LICENSE](LICENSE).
 
 ## ⭐ Star History
 
-<a href="https://star-history.com/#morpheusadam/hub-dashboard&Date">
-  <img src="https://api.star-history.com/svg?repos=morpheusadam/hub-dashboard&type=Date" alt="hub-dashboard — Star History Chart" width="70%" />
+<a href="https://star-history.com/#morpheusadam/LavzenHub&Date">
+  <img src="https://api.star-history.com/svg?repos=morpheusadam/LavzenHub&type=Date" alt="hub-dashboard — Star History Chart" width="70%" />
 </a>
 
 <div align="center">
