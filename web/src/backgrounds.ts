@@ -11,17 +11,18 @@ let ITEMS: Item[] = []
 
 const CAT_LABEL: Record<string, string> = { custom: 'Custom' }
 
-// Minimal, professional backgrounds: deep neutral bases with a single soft,
-// low-saturation light source. Understated on purpose (Linear / Vercel feel).
+// Professional dark backgrounds: a dark tinted base with one clear, coloured
+// light source. Kept tasteful, but each is visibly distinct so shuffling shows
+// an obvious change.
 const FALLBACK: Wall[] = [
-  { label: 'Graphite', css: 'radial-gradient(1200px 820px at 78% -8%, rgba(99,102,241,.14), transparent 60%),linear-gradient(180deg,#0b0d12,#07080b)' },
-  { label: 'Slate', css: 'radial-gradient(1100px 780px at 15% 0%, rgba(56,189,248,.12), transparent 58%),linear-gradient(170deg,#0a0c11,#080a0e)' },
-  { label: 'Obsidian', css: 'radial-gradient(1000px 760px at 88% 12%, rgba(168,85,247,.12), transparent 60%),linear-gradient(160deg,#0c0a12,#070609)' },
-  { label: 'Evergreen', css: 'radial-gradient(1100px 800px at 12% 8%, rgba(52,211,153,.10), transparent 58%),linear-gradient(175deg,#080d0b,#060807)' },
-  { label: 'Carbon', css: 'radial-gradient(1200px 900px at 50% -10%, rgba(255,255,255,.06), transparent 60%),linear-gradient(180deg,#0c0d10,#08090c)' },
-  { label: 'Ember', css: 'radial-gradient(1000px 760px at 85% 6%, rgba(251,146,60,.10), transparent 58%),linear-gradient(165deg,#0f0b0a,#080706)' },
-  { label: 'Indigo', css: 'radial-gradient(1200px 820px at 20% -6%, rgba(79,70,229,.16), transparent 60%),linear-gradient(180deg,#0a0b14,#07080e)' },
-  { label: 'Nocturne', css: 'radial-gradient(1100px 780px at 82% 8%, rgba(45,212,191,.10), transparent 58%),linear-gradient(170deg,#080b0e,#06080a)' },
+  { label: 'Indigo', css: 'radial-gradient(1300px 900px at 78% -12%, rgba(99,102,241,.42), transparent 62%),radial-gradient(900px 700px at 8% 108%, rgba(56,189,248,.16), transparent 60%),linear-gradient(180deg,#0b0d1c,#070810)' },
+  { label: 'Emerald', css: 'radial-gradient(1300px 900px at 82% -10%, rgba(16,185,129,.40), transparent 62%),radial-gradient(900px 700px at 10% 110%, rgba(163,230,53,.14), transparent 60%),linear-gradient(180deg,#07130f,#060b09)' },
+  { label: 'Violet', css: 'radial-gradient(1300px 900px at 20% -10%, rgba(168,85,247,.42), transparent 62%),radial-gradient(900px 720px at 95% 100%, rgba(236,72,153,.16), transparent 60%),linear-gradient(180deg,#120a1c,#0a0710)' },
+  { label: 'Ocean', css: 'radial-gradient(1300px 900px at 15% -10%, rgba(14,165,233,.40), transparent 62%),radial-gradient(900px 700px at 90% 108%, rgba(45,212,191,.18), transparent 60%),linear-gradient(180deg,#07121b,#050b12)' },
+  { label: 'Amber', css: 'radial-gradient(1300px 900px at 80% -12%, rgba(245,158,11,.36), transparent 60%),radial-gradient(900px 720px at 6% 106%, rgba(239,68,68,.16), transparent 60%),linear-gradient(180deg,#161009,#0c0806)' },
+  { label: 'Rose', css: 'radial-gradient(1300px 900px at 22% -10%, rgba(244,63,94,.38), transparent 62%),radial-gradient(900px 700px at 92% 104%, rgba(168,85,247,.16), transparent 60%),linear-gradient(180deg,#170a11,#0d070b)' },
+  { label: 'Slate', css: 'radial-gradient(1300px 940px at 50% -14%, rgba(148,163,184,.22), transparent 60%),radial-gradient(900px 700px at 85% 108%, rgba(99,102,241,.16), transparent 60%),linear-gradient(180deg,#0e1117,#080a0e)' },
+  { label: 'Teal', css: 'radial-gradient(1300px 900px at 84% -10%, rgba(20,184,166,.40), transparent 62%),radial-gradient(900px 720px at 10% 106%, rgba(59,130,246,.16), transparent 60%),linear-gradient(180deg,#08130f,#060c0c)' },
 ]
 
 export async function loadWallpapers(): Promise<number> {
