@@ -237,3 +237,20 @@ An orientation guide written for AI coding agents is in
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+
+---
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#morpheusadam/hub-dashboard&Date">
+  <img src="https://api.star-history.com/svg?repos=morpheusadam/hub-dashboard&type=Date" alt="hub-dashboard — Star History Chart" width="70%" />
+</a>
+
+<div align="center">
+
+### If this project helps you, please give it a ⭐
+
+A star helps other developers discover **hub-dashboard** and supports continued development.
+
+</div>
