@@ -1,0 +1,21 @@
+# secrets and runtime state (never commit)
+app/config.php
+app/data/*
+!app/data/.gitkeep
+
+# dependencies and build caches
+node_modules/
+web/node_modules/
+web/dist/
+
+# editor and OS noise
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# local scratch scripts and debug output
+_*.sh
+_*.js
+_*.mjs
+docs/screenshots/_debug.png

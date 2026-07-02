@@ -1,0 +1,5 @@
+# This personal hub must NOT be indexed. Crawling is allowed ON PURPOSE so
+# Google can SEE the noindex (X-Robots-Tag header + meta tag on every page);
+# a blanket Disallow would hide that and could leave bare URLs listed.
+User-agent: *
+Allow: /

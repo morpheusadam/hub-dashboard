@@ -1,0 +1,21 @@
+# Copy or run directly:
+#   docker compose -f docker/docker-compose.example.yml up -d --build
+services:
+  hub:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: lavzen-hub:php82
+    container_name: hub-dashboard
+    restart: unless-stopped
+    volumes:
+      - ../app:/var/www/html
+    ports:
+      # bind to localhost and put a reverse proxy (Caddy, nginx, Cloudflare
+      # Tunnel) in front for TLS. Change to "8086:80" to expose directly.
+      - "127.0.0.1:8086:80"
+    # environment:
+    #   # optional: enables the "Push to Git" action. Point at a git dir that
+    #   # lives OUTSIDE the web root and whose remote already has credentials.
+    #   HUB_GIT_DIR: /var/www/.hub_git
+    #   HUB_GIT_HOME: /var/www
